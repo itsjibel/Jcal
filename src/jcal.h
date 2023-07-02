@@ -17,5 +17,11 @@ public:
 
 private:
     Ui::Jcal *ui;
+
+private slots:
+    void NumPressed();
+    void MathButtonPressed();
+    void EqualButton();
+    //void ChangeNumberSign();
 };
 #endif // JCAL_H
