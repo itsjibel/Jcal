@@ -17,11 +17,10 @@ public:
 
 private:
     Ui::Jcal *ui;
+    std::string calcVal;
 
 private slots:
-    void NumPressed();
-    void MathButtonPressed();
+    void ButtonPressed();
     void EqualButton();
-    //void ChangeNumberSign();
 };
 #endif // JCAL_H
