@@ -35,7 +35,7 @@
    <string>Jcal</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="del">
+   <widget class="QPushButton" name="AC">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -60,7 +60,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>Del</string>
+     <string>AC</string>
     </property>
     <property name="autoDefault">
      <bool>false</bool>
