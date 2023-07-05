@@ -26,6 +26,9 @@ Jcal::Jcal(QWidget *parent)
     connect(ui->Button8, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->Button9, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->AC, SIGNAL(released()), this, SLOT(ButtonPressed()));
+    connect(ui->open_parenthesis, SIGNAL(released()), this, SLOT(ButtonPressed()));
+    connect(ui->closed_parenthesis, SIGNAL(released()), this, SLOT(ButtonPressed()));
+    connect(ui->dot, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->equal, SIGNAL(released()), this, SLOT(EqualButton()));
 }
 
@@ -68,6 +71,12 @@ void Jcal::ButtonPressed()
         calcVal += '8';
     else if (QString::compare(butVal, "9", Qt::CaseInsensitive) == 0)
         calcVal += '9';
+    else if (QString::compare(butVal, "(", Qt::CaseInsensitive) == 0)
+        calcVal += '(';
+    else if (QString::compare(butVal, ")", Qt::CaseInsensitive) == 0)
+        calcVal += ')';
+    else if (QString::compare(butVal, ".", Qt::CaseInsensitive) == 0)
+        calcVal += '.';
     else if (QString::compare(butVal, "AC", Qt::CaseInsensitive) == 0)
         calcVal.clear();
     ui->display->setText(QString::fromStdString(calcVal));
