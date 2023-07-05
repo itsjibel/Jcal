@@ -40,6 +40,8 @@ Jcal::~Jcal()
 
 void Jcal::ButtonPressed()
 {
+    if (ui->display->text() == "Malformed expression")
+        ui->display->setText(QString::fromStdString(""));
     QString displayVal = ui->display->text();
     calcVal = displayVal.toStdString();
     QPushButton *button = (QPushButton *)sender();
@@ -82,6 +84,7 @@ void Jcal::ButtonPressed()
         calcVal += '%';
     else if (QString::compare(butVal, "AC", Qt::CaseInsensitive) == 0)
         calcVal.clear();
+
     ui->display->setText(QString::fromStdString(calcVal));
 }
 
@@ -92,9 +95,8 @@ void Jcal::EqualButton()
         std::string postfix_result = stack::infix2postfix(calcVal);
         std::string calcVal = stack::calculate_postfix(postfix_result);
         ui->display->setText(QString::fromStdString(calcVal));
-    } else {
+    } else
         ui->display->setText(QString::fromStdString("Malformed expression"));
-    }
 }
 
 bool Jcal::validToCal(std::string& expression)
