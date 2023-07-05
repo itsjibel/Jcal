@@ -77,7 +77,7 @@ namespace stack
         switch (ch)
         {
             case '+': case '-': return 1; break;
-            case '*': case '/': return 2; break;
+            case '*': case '/': case '%': return 2; break;
             case '^': return 3;
         }
         return -1;
@@ -138,12 +138,12 @@ namespace stack
         for (unsigned long long int i=0; s[i]; ++i)
         {
             std::string number;
-            while (s[i] != '$' && s[i] != '+' && s[i] != '-' && s[i] != '*' && s[i] != '/')
+            while (s[i] != '$' && s[i] != '+' && s[i] != '-' && s[i] != '*' && s[i] != '/' && s[i] != '%')
                 number.push_back(s[i++]);
             if (!number.empty())
                 st.push(number);
 
-            if (s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/')
+            if (s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/' || s[i] == '%')
             {
                 a = st.pull();
                 b = st.pull();
@@ -153,6 +153,7 @@ namespace stack
                     case '-': st.push(b - a); break;
                     case '*': st.push(b * a); break;
                     case '/': st.push(b / a); break;
+                    case '%': st.push(b % a); break;
                 }
             }
         }

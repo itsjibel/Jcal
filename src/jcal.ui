@@ -548,10 +548,10 @@ QPushButton:pressed {
      <string>.</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="sqrt">
+   <widget class="QPushButton" name="mod">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>280</x>
       <y>510</y>
       <width>80</width>
       <height>50</height>
@@ -573,13 +573,13 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>√</string>
+     <string>%</string>
     </property>
    </widget>
    <widget class="QPushButton" name="equal">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>190</x>
       <y>510</y>
       <width>80</width>
       <height>50</height>
