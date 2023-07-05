@@ -585,8 +585,11 @@ std::string jmp::divide(str& dividend, str& divisor)
     for (int i{0}; i<divisor.size(); i++)
         detached_part.push_back(hypothetical_number.at(i));
 
-    while (how_many_decimals_calculated <= division_precision && detached_part != "0")
+    while (how_many_decimals_calculated <= division_precision && (detached_part != "0" || (how_much_forward < dividend.size() == true && detached_part == "0")))
     {
+        if (detached_part[0] == '0' && detached_part.size() != 1)
+            detached_part.erase(detached_part.begin());
+
         char num {0};
         while (which_string_number_is_bigger(detached_part, divisor) != 1)
         {
@@ -599,11 +602,6 @@ std::string jmp::divide(str& dividend, str& divisor)
 
         if (detached_part != "0" || (how_much_forward < dividend.size() == true && detached_part == "0"))
         {
-            if (detached_part == "0")
-            {
-                quotient.push_back('0');
-                continue;
-            }
 
             if (how_much_forward < dividend.size())
                 detached_part.push_back(dividend.at(how_much_forward));

@@ -87,8 +87,17 @@ void Jcal::ButtonPressed()
 
 void Jcal::EqualButton()
 {
-    std::string postfix_result = stack::infix2postfix(calcVal);
-    std::string calcVal = stack::calculate_postfix(postfix_result);
-    ui->display->setText(QString::fromStdString(calcVal));
-    calcVal.clear();
+    if (validToCal(calcVal))
+    {
+        std::string postfix_result = stack::infix2postfix(calcVal);
+        std::string calcVal = stack::calculate_postfix(postfix_result);
+        ui->display->setText(QString::fromStdString(calcVal));
+    } else {
+        ui->display->setText(QString::fromStdString("Malformed expression"));
+    }
+}
+
+bool Jcal::validToCal(std::string& expression)
+{
+    return true;
 }

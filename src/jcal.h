@@ -18,6 +18,7 @@ public:
 private:
     Ui::Jcal *ui;
     std::string calcVal;
+    bool validToCal(std::string& expression);
 
 private slots:
     void ButtonPressed();
