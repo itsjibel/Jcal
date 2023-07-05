@@ -17,6 +17,8 @@ set(PROJECT_SOURCES
         jcal.cpp
         jcal.h
         jcal.ui
+        jmp.hpp
+        stack.hpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

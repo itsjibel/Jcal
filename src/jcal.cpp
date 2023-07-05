@@ -1,6 +1,7 @@
 #include "jcal.h"
 #include "./ui_jcal.h"
 #include <string.h>
+#include "stack.hpp"
 
 Jcal::Jcal(QWidget *parent)
     : QMainWindow(parent)
@@ -71,6 +72,8 @@ void Jcal::ButtonPressed()
 
 void Jcal::EqualButton()
 {
-    ui->display->setText("");
+    std::string postfix_result = stack::infix2postfix(calcVal);
+    std::string calcVal = stack::calculate_postfix(postfix_result);
+    ui->display->setText(QString::fromStdString(calcVal));
     calcVal.clear();
 }

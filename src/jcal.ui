@@ -47,14 +47,16 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #DC143C;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #B22222;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -82,14 +84,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -108,14 +112,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -134,14 +140,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -160,14 +168,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -186,14 +196,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #FF8C00;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #FF4500;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -212,14 +224,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #FF8C00;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #FF4500;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -238,14 +252,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #FF8C00;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #FF4500;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -264,14 +280,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #FF8C00;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #FF4500;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -290,14 +308,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string>QPushButton {
 	background-color: #FF8C00;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #FF4500;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -316,14 +336,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string>QPushButton {
 	background-color: #FF8C00;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #FF4500;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -342,14 +364,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -368,14 +392,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -394,14 +420,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -420,14 +448,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -446,14 +476,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -472,14 +504,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -498,14 +532,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #A9A9A9;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #808080;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -524,14 +560,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #FF8C00;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #FF4500;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -550,14 +588,16 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	background-color: #FF8C00;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 QPushButton:pressed {
 	background-color: #FF4500;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
@@ -581,12 +621,15 @@ QPushButton:pressed {
     <property name="styleSheet">
      <string notr="true">QLineEdit {
 	background-color: #696969;
-	border: 1px solid gray;
-	padding: 5px;
+	border-style: solid;
+	border-radius: 10px;
 }</string>
     </property>
     <property name="text">
      <string>0</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
