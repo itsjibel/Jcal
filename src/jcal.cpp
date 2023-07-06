@@ -108,7 +108,7 @@ void Jcal::EqualButton()
     if (validToCal(calcVal))
     {
         std::string postfix_result = stack::infix2postfix(calcVal);
-        std::string calcVal = stack::calculate_postfix(postfix_result);
+        calcVal = stack::calculate_postfix(postfix_result);
         ui->display->setText(QString::fromStdString(calcVal));
     } else
         ui->display->setText(QString::fromStdString("Malformed expression"));
@@ -127,7 +127,7 @@ bool Jcal::validToCal(std::string& expression)
         } else if (expression[i] == '(') {
             numof_diffof_parenthesis++;
             if (i > 0)
-                if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i-1] == ')' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == ')' || expression[i+1] == '^' || expression[i+1] == 's')
+                if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i-1] == ')' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == ')' || expression[i+1] == '^')
                 {
                     locationof_characters_are_valid = false;
                     break;
@@ -147,9 +147,16 @@ bool Jcal::validToCal(std::string& expression)
                     locationof_characters_are_valid = false;
                     break;
                 }
-        } else if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/' || expression[i] == '%' || expression[i] == '^' || expression[i] == 's') {
+        } else if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/' || expression[i] == '%' || expression[i] == '^') {
             if (i > 0)
-                if (expression[i-1] == '+' || expression[i-1] == '-' || expression[i-1] == '*' || expression[i-1] == '/' || expression[i-1] == '%' || expression[i-1] == '^' || expression[i-1] == 's' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == '^' || expression[i+1] == 's')
+                if (expression[i-1] == '+' || expression[i-1] == '-' || expression[i-1] == '*' || expression[i-1] == '/' || expression[i-1] == '%' || expression[i-1] == '^' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == '^')
+                {
+                    locationof_characters_are_valid = false;
+                    break;
+                }
+        } else if (expression[i] == 's') {
+            if (i > 0)
+                if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == '^')
                 {
                     locationof_characters_are_valid = false;
                     break;

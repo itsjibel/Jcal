@@ -150,8 +150,12 @@ namespace stack
 
             if (s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/' || s[i] == '%' || s[i] == '^' || s[i] == 's')
             {
-                a = st.pull();
-                b = st.pull();
+                if (s[i] == 's')
+                    a = st.pull();
+                else {
+                    a = st.pull();
+                    b = st.pull();
+                }
                 b.set_division_precision(20);
                 switch (s[i])
                 {
