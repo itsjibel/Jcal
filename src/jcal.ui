@@ -1102,7 +1102,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>√</string>
+     <string>sqrt</string>
     </property>
    </widget>
   </widget>

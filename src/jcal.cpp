@@ -91,8 +91,8 @@ void Jcal::ButtonPressed()
         calcVal += "^2";
     else if (QString::compare(butVal, "X^3", Qt::CaseInsensitive) == 0)
         calcVal += "^3";
-    else if (QString::compare(butVal, "√", Qt::CaseInsensitive) == 0)
-        calcVal += "√";
+    else if (QString::compare(butVal, "sqrt", Qt::CaseInsensitive) == 0)
+        calcVal += 's';
     else if (QString::compare(butVal, "AC", Qt::CaseInsensitive) == 0)
         calcVal.clear();
 
@@ -121,13 +121,13 @@ bool Jcal::validToCal(std::string& expression)
 
     for (long int i{0}; i<expression.size(); i++)
     {
-        if (expression[i] != '(' && expression[i] != ')' && expression[i] != '.' && !(expression[i] >= '0' && expression[i] <= '9') && expression[i] != '-' && expression[i] != '+' && expression[i] != '*' && expression[i] != '/' && expression[i] != '%' && expression[i] != '^') {
+        if (expression[i] != '(' && expression[i] != ')' && expression[i] != '.' && !(expression[i] >= '0' && expression[i] <= '9') && expression[i] != '-' && expression[i] != '+' && expression[i] != '*' && expression[i] != '/' && expression[i] != '%' && expression[i] != '^' && expression[i] != 's') {
             allof_characters_are_valid = false;
             break;
         } else if (expression[i] == '(') {
             numof_diffof_parenthesis++;
             if (i > 0)
-                if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i-1] == ')' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == ')' && expression[i+1] == '^')
+                if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i-1] == ')' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == ')' || expression[i+1] == '^' || expression[i+1] == 's')
                 {
                     locationof_characters_are_valid = false;
                     break;
@@ -135,7 +135,7 @@ bool Jcal::validToCal(std::string& expression)
         } else if (expression[i] == ')') {
             numof_diffof_parenthesis--;
             if (i > 0)
-                if ((expression[i+1] >= '0' && expression[i+1] <= '9') || expression[i+1] == '(' || expression[i-1] == '+' || expression[i-1] == '-' || expression[i-1] == '*' || expression[i-1] == '/' || expression[i-1] == '%' || expression[i-1] == '(' || expression[i-1] == '^')
+                if ((expression[i+1] >= '0' && expression[i+1] <= '9') || expression[i+1] == '(' || expression[i-1] == '+' || expression[i-1] == '-' || expression[i-1] == '*' || expression[i-1] == '/' || expression[i-1] == '%' || expression[i-1] == '(' || expression[i-1] == '^' || expression[i-1] == 's')
                 {
                     locationof_characters_are_valid = false;
                     break;
@@ -147,9 +147,9 @@ bool Jcal::validToCal(std::string& expression)
                     locationof_characters_are_valid = false;
                     break;
                 }
-        } else if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/' || expression[i] == '%' || expression[i] == '^') {
+        } else if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/' || expression[i] == '%' || expression[i] == '^' || expression[i] == 's') {
             if (i > 0)
-                if (expression[i-1] == '+' || expression[i-1] == '-' || expression[i-1] == '*' || expression[i-1] == '/' || expression[i-1] == '%' || expression[i-1] == '^' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == '^')
+                if (expression[i-1] == '+' || expression[i-1] == '-' || expression[i-1] == '*' || expression[i-1] == '/' || expression[i-1] == '%' || expression[i-1] == '^' || expression[i-1] == 's' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == '^' || expression[i+1] == 's')
                 {
                     locationof_characters_are_valid = false;
                     break;
@@ -157,7 +157,7 @@ bool Jcal::validToCal(std::string& expression)
         }
     }
 
-    if (expression.back() == '+' || expression.back() == '-' || expression.back() == '*' || expression.back() == '/' || expression.back() == '%' || expression.back() == '^' || expression.back() == '.' ||
+    if (expression.back() == '+' || expression.back() == '-' || expression.back() == '*' || expression.back() == '/' || expression.back() == '%' || expression.back() == '^' || expression.back() == '.' || expression.back() == 's' ||
         expression.front() == '*' || expression.front() == '/' || expression.front() == '%' || expression.front() == '^')
         locationof_characters_are_valid = false;
 
