@@ -24,4 +24,4 @@ private slots:
     void ButtonPressed();
     void EqualButton();
 };
-#endif // JCAL_H
+#endif

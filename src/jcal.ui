@@ -930,6 +930,9 @@ QPushButton:pressed {
     <property name="text">
      <string>0</string>
     </property>
+    <property name="maxLength">
+     <number>1999999999</number>
+    </property>
     <property name="readOnly">
      <bool>false</bool>
     </property>
@@ -973,7 +976,133 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>^</string>
+     <string>X^y</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="squred">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>240</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #FF8C00;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}
+
+QPushButton:pressed {
+	background-color: #FF4500;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string>X^2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cube">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>300</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #FF8C00;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}
+
+QPushButton:pressed {
+	background-color: #FF4500;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string>X^3</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sqrt">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>360</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string>QPushButton {
+	background-color: #FF8C00;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}
+
+QPushButton:pressed {
+	background-color: #FF4500;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string>√</string>
     </property>
    </widget>
   </widget>

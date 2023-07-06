@@ -29,6 +29,9 @@ Jcal::Jcal(QWidget *parent)
     connect(ui->closed_parenthesis, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->dot, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->power, SIGNAL(released()), this, SLOT(ButtonPressed()));
+    connect(ui->squred, SIGNAL(released()), this, SLOT(ButtonPressed()));
+    connect(ui->cube, SIGNAL(released()), this, SLOT(ButtonPressed()));
+    connect(ui->sqrt, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->mod, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->equal, SIGNAL(released()), this, SLOT(EqualButton()));
 }
@@ -82,8 +85,14 @@ void Jcal::ButtonPressed()
         calcVal += '.';
     else if (QString::compare(butVal, "%", Qt::CaseInsensitive) == 0)
         calcVal += '%';
-    else if (QString::compare(butVal, "^", Qt::CaseInsensitive) == 0)
+    else if (QString::compare(butVal, "X^y", Qt::CaseInsensitive) == 0)
         calcVal += '^';
+    else if (QString::compare(butVal, "X^2", Qt::CaseInsensitive) == 0)
+        calcVal += "^2";
+    else if (QString::compare(butVal, "X^3", Qt::CaseInsensitive) == 0)
+        calcVal += "^3";
+    else if (QString::compare(butVal, "√", Qt::CaseInsensitive) == 0)
+        calcVal += "√";
     else if (QString::compare(butVal, "AC", Qt::CaseInsensitive) == 0)
         calcVal.clear();
 
