@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>372</width>
-    <height>616</height>
+    <width>461</width>
+    <height>489</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,32 +21,62 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>372</width>
-    <height>616</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>372</width>
-    <height>616</height>
+    <width>900000</width>
+    <height>900000</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Jcal</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: #404040;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">centralwidget {
+	background-color: #404040;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}</string>
+   </property>
    <widget class="QPushButton" name="AC">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>270</y>
+      <y>180</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #DC143C;
+	background-color: #DF0000;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -76,21 +106,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>330</y>
+      <y>240</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -104,21 +148,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>390</y>
+      <y>300</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -132,21 +190,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>450</y>
+      <y>360</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -160,21 +232,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>510</y>
+      <y>420</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -188,10 +274,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>270</y>
+      <y>180</y>
       <width>80</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
@@ -216,10 +316,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>270</y>
+      <y>180</y>
       <width>80</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
@@ -244,10 +358,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>270</y>
+      <y>180</y>
       <width>80</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
@@ -272,10 +400,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>330</y>
+      <y>240</y>
       <width>80</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
@@ -300,10 +442,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>390</y>
+      <y>300</y>
       <width>80</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string>QPushButton {
@@ -328,10 +484,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>450</y>
+      <y>360</y>
       <width>80</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string>QPushButton {
@@ -356,21 +526,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>330</y>
+      <y>240</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -384,21 +568,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>330</y>
+      <y>240</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -412,21 +610,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>390</y>
+      <y>300</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -440,21 +652,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>450</y>
+      <y>360</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -468,21 +694,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>450</y>
+      <y>360</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -496,21 +736,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>390</y>
+      <y>300</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -524,21 +778,35 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>510</y>
+      <y>420</y>
       <width>80</width>
       <height>50</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: #A9A9A9;
+	background-color: #808080;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
 }
 
 QPushButton:pressed {
-	background-color: #808080;
+	background-color: #707070;
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 10px;
@@ -552,10 +820,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>510</y>
+      <y>420</y>
       <width>80</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
@@ -580,10 +862,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>510</y>
+      <y>420</y>
       <width>80</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
@@ -608,19 +904,25 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>177</y>
-      <width>351</width>
-      <height>71</height>
+      <y>40</y>
+      <width>441</width>
+      <height>101</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
+      <pointsize>24</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QLineEdit {
-	background-color: #696969;
+	background-color: #606060;
 	border-style: solid;
 	border-radius: 10px;
 }</string>
@@ -629,7 +931,49 @@ QPushButton:pressed {
      <string>0</string>
     </property>
     <property name="readOnly">
-     <bool>true</bool>
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="power">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>180</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #FF8C00;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}
+
+QPushButton:pressed {
+	background-color: #FF4500;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string>^</string>
     </property>
    </widget>
   </widget>
@@ -638,12 +982,29 @@ QPushButton:pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>372</width>
+     <width>461</width>
      <height>26</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">menubar {
+	background-color: #404040;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}</string>
+   </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">statusbar {
+	background-color: #404040;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
+}</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

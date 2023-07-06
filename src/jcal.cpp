@@ -1,6 +1,5 @@
 #include "jcal.h"
 #include "./ui_jcal.h"
-#include <string.h>
 #include "stack.hpp"
 
 Jcal::Jcal(QWidget *parent)
@@ -29,6 +28,7 @@ Jcal::Jcal(QWidget *parent)
     connect(ui->open_parenthesis, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->closed_parenthesis, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->dot, SIGNAL(released()), this, SLOT(ButtonPressed()));
+    connect(ui->power, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->mod, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->equal, SIGNAL(released()), this, SLOT(EqualButton()));
 }
@@ -82,6 +82,8 @@ void Jcal::ButtonPressed()
         calcVal += '.';
     else if (QString::compare(butVal, "%", Qt::CaseInsensitive) == 0)
         calcVal += '%';
+    else if (QString::compare(butVal, "^", Qt::CaseInsensitive) == 0)
+        calcVal += '^';
     else if (QString::compare(butVal, "AC", Qt::CaseInsensitive) == 0)
         calcVal.clear();
 
@@ -90,6 +92,10 @@ void Jcal::ButtonPressed()
 
 void Jcal::EqualButton()
 {
+    if (ui->display->text() == "Malformed expression")
+        ui->display->setText(QString::fromStdString(""));
+    QString displayVal = ui->display->text();
+    calcVal = displayVal.toStdString();
     if (validToCal(calcVal))
     {
         std::string postfix_result = stack::infix2postfix(calcVal);
@@ -101,5 +107,50 @@ void Jcal::EqualButton()
 
 bool Jcal::validToCal(std::string& expression)
 {
-    return true;
+    bool allof_characters_are_valid = true, locationof_characters_are_valid = true;
+    long int numof_diffof_parenthesis {0};
+
+    for (long int i{0}; i<expression.size(); i++)
+    {
+        if (expression[i] != '(' && expression[i] != ')' && expression[i] != '.' && !(expression[i] >= '0' && expression[i] <= '9') && expression[i] != '-' && expression[i] != '+' && expression[i] != '*' && expression[i] != '/' && expression[i] != '%' && expression[i] != '^') {
+            allof_characters_are_valid = false;
+            break;
+        } else if (expression[i] == '(') {
+            numof_diffof_parenthesis++;
+            if (i > 0)
+                if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i-1] == ')' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == ')' && expression[i+1] == '^')
+                {
+                    locationof_characters_are_valid = false;
+                    break;
+                }
+        } else if (expression[i] == ')') {
+            numof_diffof_parenthesis--;
+            if (i > 0)
+                if ((expression[i+1] >= '0' && expression[i+1] <= '9') || expression[i+1] == '(' || expression[i-1] == '+' || expression[i-1] == '-' || expression[i-1] == '*' || expression[i-1] == '/' || expression[i-1] == '%' || expression[i-1] == '(' || expression[i-1] == '^')
+                {
+                    locationof_characters_are_valid = false;
+                    break;
+                }
+        } else if (expression[i] == '.') {
+            if (i > 0)
+                if (!(expression[i+1] >= '0' && expression[i+1] <= '9') && (expression[i-1] >= '0' && expression[i-1] <= '9'))
+                {
+                    locationof_characters_are_valid = false;
+                    break;
+                }
+        } else if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/' || expression[i] == '%' || expression[i] == '^') {
+            if (i > 0)
+                if (expression[i-1] == '+' || expression[i-1] == '-' || expression[i-1] == '*' || expression[i-1] == '/' || expression[i-1] == '%' || expression[i-1] == '^' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == '^')
+                {
+                    locationof_characters_are_valid = false;
+                    break;
+                }
+        }
+    }
+
+    if (expression.back() == '+' || expression.back() == '-' || expression.back() == '*' || expression.back() == '/' || expression.back() == '%' || expression.back() == '^' || expression.back() == '.' ||
+        expression.front() == '*' || expression.front() == '/' || expression.front() == '%' || expression.front() == '^')
+        locationof_characters_are_valid = false;
+
+    return numof_diffof_parenthesis == 0 && allof_characters_are_valid && locationof_characters_are_valid;
 }

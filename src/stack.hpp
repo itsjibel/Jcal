@@ -92,6 +92,9 @@ namespace stack
         {
             char ch = s[i];
 
+            if ((ch == '+' || ch == '-') && i == 0)
+                ans += ch;
+
             if (ch >= '0' && ch <= '9' || ch == '.')
             {
                 while (ch >= '0' && ch <= '9' || ch == '.')
@@ -135,18 +138,20 @@ namespace stack
     {
         jmp a, b;
         Stack<jmp> st(s.size());
+
         for (unsigned long long int i=0; s[i]; ++i)
         {
             std::string number;
-            while (s[i] != '$' && s[i] != '+' && s[i] != '-' && s[i] != '*' && s[i] != '/' && s[i] != '%')
+            while (s[i] != '$' && s[i] != '+' && s[i] != '-' && s[i] != '*' && s[i] != '/' && s[i] != '%' && s[i] != '^')
                 number.push_back(s[i++]);
             if (!number.empty())
                 st.push(number);
 
-            if (s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/' || s[i] == '%')
+            if (s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/' || s[i] == '%' || s[i] == '^')
             {
                 a = st.pull();
                 b = st.pull();
+                b.set_division_precision(20);
                 switch (s[i])
                 {
                     case '+': st.push(b + a); break;
@@ -154,6 +159,7 @@ namespace stack
                     case '*': st.push(b * a); break;
                     case '/': st.push(b / a); break;
                     case '%': st.push(b % a); break;
+                    case '^': st.push(JMP::pow(b, a)); break;
                 }
             }
         }
