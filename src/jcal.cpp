@@ -32,6 +32,7 @@ Jcal::Jcal(QWidget *parent)
     connect(ui->squred, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->cube, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->sqrt, SIGNAL(released()), this, SLOT(ButtonPressed()));
+    connect(ui->abs, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->mod, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->equal, SIGNAL(released()), this, SLOT(EqualButton()));
 }
@@ -93,6 +94,8 @@ void Jcal::ButtonPressed()
         calcVal += "^3";
     else if (QString::compare(butVal, "sqrt", Qt::CaseInsensitive) == 0)
         calcVal += 's';
+    else if (QString::compare(butVal, "abs", Qt::CaseInsensitive) == 0)
+        calcVal += 'a';
     else if (QString::compare(butVal, "AC", Qt::CaseInsensitive) == 0)
         calcVal.clear();
 
@@ -121,7 +124,7 @@ bool Jcal::validToCal(std::string& expression)
 
     for (long int i{0}; i<expression.size(); i++)
     {
-        if (expression[i] != '(' && expression[i] != ')' && expression[i] != '.' && !(expression[i] >= '0' && expression[i] <= '9') && expression[i] != '-' && expression[i] != '+' && expression[i] != '*' && expression[i] != '/' && expression[i] != '%' && expression[i] != '^' && expression[i] != 's') {
+        if (expression[i] != '(' && expression[i] != ')' && expression[i] != '.' && !(expression[i] >= '0' && expression[i] <= '9') && expression[i] != '-' && expression[i] != '+' && expression[i] != '*' && expression[i] != '/' && expression[i] != '%' && expression[i] != '^' && expression[i] != 's' && expression[i] != 'a') {
             allof_characters_are_valid = false;
             break;
         } else if (expression[i] == '(') {
@@ -157,6 +160,13 @@ bool Jcal::validToCal(std::string& expression)
         } else if (expression[i] == 's') {
             if (i > 0)
                 if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == '^')
+                {
+                    locationof_characters_are_valid = false;
+                    break;
+                }
+        } else if (expression[i] == 'a') {
+            if (i > 0)
+                if (!((expression[i+1] >= '0' && expression[i+1] <= '9') || expression[i+1] == '(' || expression[i+1] == '-' || expression[i+1] == '+') || (expression[i-1] >= '0' && expression[i-1] <= '9'))
                 {
                     locationof_characters_are_valid = false;
                     break;
