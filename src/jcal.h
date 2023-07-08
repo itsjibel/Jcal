@@ -11,6 +11,9 @@ class Jcal : public QMainWindow
 {
     Q_OBJECT
 
+protected:
+    bool eventFilter(QObject* object, QEvent* event);
+
 public:
     Jcal(QWidget *parent = nullptr);
     ~Jcal();

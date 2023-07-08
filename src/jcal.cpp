@@ -1,6 +1,7 @@
 #include "jcal.h"
 #include "./ui_jcal.h"
 #include "stack.hpp"
+#include <QKeyEvent>
 
 Jcal::Jcal(QWidget *parent)
     : QMainWindow(parent)
@@ -35,11 +36,26 @@ Jcal::Jcal(QWidget *parent)
     connect(ui->abs, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->mod, SIGNAL(released()), this, SLOT(ButtonPressed()));
     connect(ui->equal, SIGNAL(released()), this, SLOT(EqualButton()));
+    ui->display->installEventFilter(this);
 }
 
 Jcal::~Jcal()
 {
     delete ui;
+}
+
+bool Jcal::eventFilter(QObject* object, QEvent* event)
+{
+    if (object == ui->display && event->type() == QEvent::KeyPress)
+    {
+        QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
+        if (keyEvent->key() == Qt::Key_Return || keyEvent->key() == Qt::Key_Enter)
+        {
+            EqualButton();
+            return true;
+        }
+    }
+    return QMainWindow::eventFilter(object, event);
 }
 
 void Jcal::ButtonPressed()
