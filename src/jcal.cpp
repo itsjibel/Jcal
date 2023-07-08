@@ -127,7 +127,7 @@ bool Jcal::validToCal(std::string& expression)
         } else if (expression[i] == '(') {
             numof_diffof_parenthesis++;
             if (i > 0)
-                if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i-1] == ')' || expression[i+1] == '+' || expression[i+1] == '-' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == ')' || expression[i+1] == '^')
+                if ((expression[i-1] >= '0' && expression[i-1] <= '9') || expression[i-1] == ')' || expression[i+1] == '*' || expression[i+1] == '/' || expression[i+1] == '%' || expression[i+1] == ')' || expression[i+1] == '^')
                 {
                     locationof_characters_are_valid = false;
                     break;
