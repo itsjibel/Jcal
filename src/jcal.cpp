@@ -109,9 +109,9 @@ void Jcal::ButtonPressed()
     else if (QString::compare(butVal, "X^3", Qt::CaseInsensitive) == 0)
         calcVal += "^3";
     else if (QString::compare(butVal, "sqrt", Qt::CaseInsensitive) == 0)
-        calcVal += 's';
+        calcVal += "sqrt(";
     else if (QString::compare(butVal, "abs", Qt::CaseInsensitive) == 0)
-        calcVal += 'a';
+        calcVal += "abs(";
     else if (QString::compare(butVal, "AC", Qt::CaseInsensitive) == 0)
         calcVal.clear();
 
@@ -124,6 +124,7 @@ void Jcal::EqualButton()
         ui->display->setText(QString::fromStdString(""));
     QString displayVal = ui->display->text();
     calcVal = displayVal.toStdString();
+    replaceKeywords(calcVal);
     if (validToCal(calcVal))
     {
         std::string postfix_result = stack::infix2postfix(calcVal);
@@ -195,4 +196,25 @@ bool Jcal::validToCal(std::string& expression)
         locationof_characters_are_valid = false;
 
     return numof_diffof_parenthesis == 0 && allof_characters_are_valid && locationof_characters_are_valid;
+}
+
+void Jcal::replaceKeywords(std::string& str)
+{
+    size_t pos = 0;
+
+    // Replace "sqrt" with "s"
+    while ((pos = str.find("sqrt", pos)) != std::string::npos)
+    {
+        str.replace(pos, 4, "s");
+        pos += 1; // Move past the replaced character
+    }
+
+    pos = 0;
+
+    // Replace "abs" with "a"
+    while ((pos = str.find("abs", pos)) != std::string::npos)
+    {
+        str.replace(pos, 3, "a");
+        pos += 1; // Move past the replaced character
+    }
 }

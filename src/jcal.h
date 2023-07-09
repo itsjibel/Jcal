@@ -22,6 +22,7 @@ private:
     Ui::Jcal *ui;
     std::string calcVal;
     bool validToCal(std::string& expression);
+    void replaceKeywords(std::string& str);
 
 private slots:
     void ButtonPressed();
